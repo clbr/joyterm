@@ -21,6 +21,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <unistd.h>
@@ -299,6 +300,10 @@ int main() {
 				} else if (c == BTN_LEFT /* c-left */ ||
 						c == KEY_SPACE) {
 					rote_vt_keypress(rt, ' ');
+				} else if (c == BTN_FORWARD || c == KEY_I) {
+					rote_vt_write(rt, "\e[A", strlen("\e[A"));
+				} else if (c == BTN_BACK || c == KEY_K) {
+					rote_vt_write(rt, "\e[B", strlen("\e[B"));
 				}
 			}
 		}
