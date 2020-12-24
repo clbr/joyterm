@@ -287,7 +287,7 @@ int main() {
 					UPDCURSOR();
 				} else if (c == BTN_Z || c == BTN_RIGHT /* c-right */ ||
 						c == KEY_ENTER) {
-					rote_vt_keypress(rt, '\n');
+					rote_vt_keypress(rt, '\r');
 				} else if (c == BTN_2 /* l */ || c == KEY_TAB) {
 					rote_vt_keypress(rt, '\t');
 				} else if (c == BTN_1 /* b */ || c == KEY_BACKSPACE) {
