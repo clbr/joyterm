@@ -13,7 +13,7 @@ NAME = joyterm
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) -o $(NAME) $(LDFLAGS) $(CFLAGS) $(LIBS) $(OBJS)
+	$(CC) -o $(NAME) $(LDFLAGS) $(CFLAGS) $(OBJS) $(LIBS)
 
 $(OBJS): $(wildcard *.h)
 
