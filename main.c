@@ -188,6 +188,9 @@ int main() {
 		return 1;
 	}
 
+	usleep(200 * 1000);
+	system("dmesg -n 4"); // don't print "crng init done" on top of us
+
 	poller.fd = fd;
 	poller.events = POLLIN;
 
